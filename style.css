@@ -1,0 +1,46 @@
+/* Logo et Ménu */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+.menu a{
+    text-decoration: none;
+    padding: 10px;
+    color: grey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: end;
+
+}
+header .menu a { 
+    position: relative; 
+    margin: 0 10px; 
+    text-decoration: 0; 
+    color: #8d8b8b; 
+    transition: 0.5s; 
+    transform: translate();
+}
+header .menu a:hover { 
+    color: rgb(7, 7, 7); 
+    
+}
+.logo{
+    font-size: 2px;
+}
+
+/* Introducion et phrases d'entrée */ 
+
+.intro{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+body{
+    transition: 0.5s;
+}
