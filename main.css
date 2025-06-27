@@ -88,27 +88,9 @@ header {
         font-weight: 500;
       }
 
-      @media (max-width: 768px) {
-        .menu ul {
-          display: none;
-        }
-
-        .hamburger {
-          display: block;
-        }
-      }
-
       body.no-scroll {
         overflow: hidden;
       }
-
-
-
-
-
-
-
-
 
 
 
@@ -252,7 +234,7 @@ header {
   text-decoration: none;
   color: #333;
   font-family: fantasy;
-  padding: 10px;
+  padding: 2px;
   border-radius: 5px;
 }
 .lien li a {
@@ -342,3 +324,250 @@ img {
   transform: translate(40px, 0px);
   cursor: pointer;
 }
+
+
+
+/*  Styles pour la page transmission */
+
+.page-transmission .banniere-transmission {
+  background: url("transmission .jpg") no-repeat center center/cover;
+  height: 300px;
+  position: relative;
+}
+
+.page-transmission .banniere-transmission::after {
+  content: "TRANSMISSION";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004d66;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px 25px;
+  border-radius: 8px;
+}
+
+/* Section principale */
+.page-transmission section {
+  padding: 20px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Titres */
+.page-transmission h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #007B5E;
+  text-align: center;
+}
+
+.page-transmission h3 {
+  font-size: 1.2rem;
+  margin-top: 40px;
+
+  color: #004d66;
+  border-left: 5px solid #007B5E;
+  padding-left: 10px;
+}
+
+.page-transmission h4 {
+  font-size: 1.7rem;
+  margin-top: 25px;
+  color: rgb(154, 241, 241);
+}
+
+/* Paragraphes */
+.page-transmission p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+
+/* Style pour la page prévention */
+
+.banniere-prevention {
+  background: url("prévention .jpg") no-repeat center center/cover;
+  height: 300px;
+  position: relative;
+}
+
+.banniere-prevention::after {
+  content: "PRÉVENTION";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004d66;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px 20px;
+  border-radius: 10px;
+
+}
+
+/* === Section spécifique à la page prévention === */
+section.prevention-page {
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.prevention-page .card-prevention {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+}
+
+/* Titres et textes spécifiques à prévention */
+.prevention-page h2,
+.prevention-page h3,
+.prevention-page h4 {
+  color: #004d66;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.prevention-page p {
+
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.prevention-page strong {
+  color: #007b5e;
+}
+
+
+/* Style pour la page symptôme */
+
+.banniere-symptome {
+  background: url(" ") no-repeat center center/cover;
+  height: 300px;
+  position: relative;
+}
+.banniere-symptome::after {
+  content: "SYMPTÔMES";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004d66;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* === Section spécifique à la page symptome === */
+section.symptome-page {
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: auto;
+}
+.symptome-page .card-symptome {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+}
+
+/* Titres et textes spécifiques à symptôme */
+.symptome-page h2,
+.symptome-page h3,
+.symptome-page h4 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.symptome-page p {
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.symptome-page h4 {
+  color: #007b5e;
+}
+
+.symptome-page strong {
+  color: #007b5e;
+}
+.symptome-page h3 {
+  color: #93d6d0;
+}
+
+
+
+
+
+
+/* La responsivité */
+
+@media (max-width: 768px) {
+        .menu ul {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+        
+  .page-transmission .banniere-transmission::after {
+    font-size: 2rem;
+    bottom: 10px;
+    left: 15px;
+  }
+
+  .page-transmission section {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .page-transmission h2 {
+    font-size: 1.2rem;
+  }
+
+  .page-transmission h3 {
+    font-size: 1rem;
+  }
+  .banniere-prevention::after {
+    font-size: 2rem;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .prevention-page {
+    padding: 15px;
+  }
+
+  .prevention-page .card-prevention {
+    padding: 15px;
+  }
+
+  .prevention-page h2 {
+    font-size: 1.3rem;
+  }
+
+
+  .prevention-page p {
+    font-size: 0.95rem;
+  }
+
+      }
