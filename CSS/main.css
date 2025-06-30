@@ -34,6 +34,7 @@ header {
 }
 .menu a {
   list-style: none;
+  display: flex;
   text-decoration: none;
   color: #333;
   margin-left: 20px; /* Espace entre les liens */
@@ -43,8 +44,9 @@ header {
 .menu a:hover {
   background-color: rgb(7, 7, 7);
   color: rgb(254, 255, 255);
-  border-radius: 55px;
-  padding: 10px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   transition: 0.5s;
 }
 
@@ -95,7 +97,7 @@ body.no-scroll {
 }
 
 .background {
-  background: url("santé_img2.jpeg") no-repeat center center/cover;
+  background: url("/Images/santé_img2.jpeg") no-repeat center center/cover;
   height: 100vh;
   position: relative;
 }
@@ -204,6 +206,7 @@ body.no-scroll {
   text-decoration: none;
 }
 
+
 /* Petite note de prévention */
 .prevention {
   background-color: #f3fbfa;
@@ -224,7 +227,7 @@ body.no-scroll {
 /* Pieds de la page */
 
 .pieds {
-  background: url("img1.png");
+  background: url("/Images/img1.png");
 }
 .pieds li {
   list-style-type: none;
@@ -254,10 +257,7 @@ body.no-scroll {
   transform: translate(25px, 0px);
   font-size: 2rem;
 }
-.pieds li a:hover {
-  color: azure;
-  transition: 0.5s;
-}
+
 
 .liens-utiles h4 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -291,44 +291,88 @@ body.no-scroll {
   padding: 2px;
 }
 .lien a:hover {
-  color: #0077cc;
+  color: #fbfcfd;
+  transition: 0.5s;
+}
+.liens a {
+  text-decoration: none;
+  color: #026788;
+  list-style-type: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 2px;
+}
+.liens a:hover {
+  color: cyan;
+  transition: 0.5s;
+}
+.dmenu {
+  margin-left: 5055px;
 }
 
 /* Presentation de la page maladies */
-
-.CoMaKi {
-  background: url("santé_img.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  padding-top: 20px;
+.banniere-maladie {
+  background: url("/Images/santé_img.jpeg") no-repeat center center/cover;
+  height: 300px;
   position: relative;
 }
-.intro {
-  background: rgba(225, 225, 225, 0.7);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(7px);
+.banniere-maladie::after {
+  content: "MALADIES";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
-  flex-direction: column;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  bottom: 20px;
+  left: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004d66;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px 20px;
+  border-radius: 10px;
 }
+
 img {
   display: block;
   border-radius: 10px;
-  transform: translate(40px, 0px);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
   cursor: pointer;
 }
+.page-maladie section {
+  padding: 20px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
+.page-maladie h3 {
+  font-size: 1.2rem;
+  margin-top: 40px;
+  color: #004d66;
+  border-left: 5px solid #007b5e;
+  padding-left: 10px;
+}
+.page-maladie h4 {
+  font-size: 1.7rem;
+  margin-top: 25px;
+  color: rgb(154, 241, 241);
+}
+.page-maladie p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.page-maladie .lien li a {
+  color: #333;
+}
+.page-maladie .lien li a:hover {
+  color: azure;
+}
+.page-maladie strong .ref  {
+  text-align: center;
+}
 
 .liens-utiles {
   text-align: center;
@@ -371,10 +415,11 @@ img {
 }
 
 
+
 /*  Styles pour la page transmission */
 
 .page-transmission .banniere-transmission {
-  background: url("transmission .jpg") no-repeat center center/cover;
+  background: url("/Images/transmission .jpg") no-repeat center center/cover;
   height: 300px;
   position: relative;
 }
@@ -431,10 +476,64 @@ img {
   text-align: justify;
 }
 
+
+/* Style pour la page Traitement */
+
+.banniere-traitement {
+  background: url("/Images/chercheur-travaillant-avec-des-fluides-dans-des-flacons-dans-le-laboratoire-de-chimie.jpg") no-repeat center center/cover;
+  height: 300px;
+  position: relative;
+}
+.banniere-traitement::after {
+  content: "TRAITEMENT";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004d66;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+section.traitement-page {
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: auto;
+}
+.traitement-page .card-traitement {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+}
+
+.traitement-page h2,
+.traitement-page h3,
+.traitement-page h4 {
+  color: #004d66;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.traitement-page p {
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.traitement-page strong {
+  color: #007b5e;
+}
+
+
 /* Style pour la page prévention */
 
 .banniere-prevention {
-  background: url("prévention .jpg") no-repeat center center/cover;
+  background: url("/Images/prévention .jpg") no-repeat center center/cover;
   height: 300px;
   position: relative;
 }
@@ -490,10 +589,64 @@ section.prevention-page {
   color: #007b5e;
 }
 
+/* Style pour la page Ressource */
+
+.banniere-ressource {
+  background: url("/Images/42585516-ai-genere-medical-stethoscope-sur-vert-contexte-haut-vue-avec-copie-espace-photo.jpg") no-repeat center center/cover;
+  height: 300px;
+  position: relative;
+}
+.banniere-ressource::after {
+  content: "RESSOURCE";
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004d66;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+section.ressource-page {
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: auto;
+}
+.ressource-page .card-ressource{
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+}
+.ressource-page h2,
+.ressource-page h3,
+.ressource-page h4 {
+  color: #004d66;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.ressource-page p {
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.ressource-page strong {
+  color: #007b5e;
+}
+
+
+
+
 /* Style pour la page symptôme */
 
 .banniere-symptome {
-  background: url(" ") no-repeat center center/cover;
+  background: url("/Images/symptômes-dicônes-pneumonie-respiratoire-de-maladie-grippe-fièvre.jpg") no-repeat center center/cover;
   height: 300px;
   position: relative;
 }
@@ -505,12 +658,13 @@ section.prevention-page {
   font-size: 3rem;
   font-weight: bold;
   color: #004d66;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(119, 239, 249, 0.75);
   padding: 10px 20px;
   border-radius: 10px;
 }
 
 /* === Section spécifique à la page symptome === */
+
 section.symptome-page {
   padding: 20px;
   background-color: #ffffff;
@@ -676,6 +830,65 @@ section.symptome-page {
   background-color: #005f56;
 }
 
+/* Style de la page À propos */
+
+.a-propos-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.a-propos-section h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.a-propos-section h3 {
+  margin-top: 1.5rem;
+  color: #2980b9;
+}
+
+.a-propos-section p {
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.apropos-img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+
+  display: block;
+  border-radius: 8px;
+}
+
+/* Bouton vers la page Contact */
+.cta-contact {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-contact {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #2980b9;
+}
+
+
+
 /* La responsivité */
 
 @media (max-width: 768px) {
@@ -685,6 +898,25 @@ section.symptome-page {
 
   .hamburger {
     display: block;
+  }
+
+  .page-maladie .banniere-maladie::after {
+    font-size: 2rem;
+    bottom: 10px;
+    left: 15px;
+  }
+
+  .page-maladie section {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .page-maladie h2 {
+    font-size: 1.2rem;
+  }
+
+  .page-maladie h3 {
+    font-size: 1rem;
   }
 
   .page-transmission .banniere-transmission::after {
@@ -726,6 +958,59 @@ section.symptome-page {
   .prevention-page p {
     font-size: 0.95rem;
   }
+  .banniere-ressource::after {
+    font-size: 2rem;
+    bottom: 15px;
+    left: 15px;
+  }
+  .ressource-page {
+    padding: 15px;
+  }
+  .ressource-page .card-ressource {
+    padding: 15px;
+  }
+  .ressource-page h2 {
+    font-size: 1.3rem;
+  }
+  .ressource-page p {
+    font-size: 0.95rem;
+  }
+
+  .banniere-traitement::after {
+    font-size: 2rem;
+    bottom: 15px;
+    left: 15px;
+  }
+  .traitement-page {
+    padding: 15px;
+  }
+  .traitement-page .card-traitement {
+    padding: 15px;
+  }
+  .traitement-page h2 {
+    font-size: 1.3rem;
+  }
+  .traitement-page p {
+    font-size: 0.95rem;
+  }
+
+   .banniere-symptome::after {
+    font-size: 2rem;
+    bottom: 15px;
+    left: 15px;
+  }
+  .symptome-page {
+    padding: 15px;
+  }
+  .symptome-page .card-traitement {
+    padding: 15px;
+  }
+  .symptome-page h2 {
+    font-size: 1.3rem;
+  }
+  .symptome-page p {
+    font-size: 0.95rem;
+  }
 
   .centre-page {
     padding: 1rem;
@@ -754,5 +1039,28 @@ section.symptome-page {
   .contact-socials a {
     font-size: 1.3rem;
     margin: 0 5px;
+  }
+
+  .CoMaKi {
+    height: auto;
+    padding: 60px 20px;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .intro p {
+    font-size: 1rem;
+  }
+  .page-maladies section {
+    padding: 20px 15px;
+  }
+  .page-maladies h2 {
+    font-size: 1.6rem;
+  }
+  .page-maladies h3 {
+    font-size: 1.3rem;
+  }
+  .page-maladies h4 {
+    font-size: 1.1rem;
   }
 }
